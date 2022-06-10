@@ -58,8 +58,8 @@ function App() {
         onChange={(e) => handleChange(e.target.value)}
       />
       <div className="Words">
-        {words.slice(0, 5).map((word) => (
-          <p key={word}>{word}</p>
+        {words.slice(0, 5).map((word, index) => (
+          <p key={index}>{word}</p>
         ))}
       </div>
     </div>
