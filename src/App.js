@@ -1,5 +1,6 @@
+import logo from "./logo.svg";
 import "./App.css";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 const defaultWords = ["A", "B", "C", "D", "E"];
 
@@ -47,7 +48,7 @@ function App() {
     }
   };
 
-  const handleChange = () => debounce(fetchWords);
+  const handleChange = useCallback(debounce(fetchWords));
 
   return (
     <div className="Container">
